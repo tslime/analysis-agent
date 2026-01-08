@@ -30,9 +30,10 @@ llm = AzureChatOpenAI(
     api_version="2025-01-01-preview"
     )
 
+#Load data set
 df = pd.read_csv("data/btcusd_1-min_data.csv")
 
-
+#Initiate agent
 report_agent = create_pandas_dataframe_agent(
     llm,
     df,
@@ -42,11 +43,7 @@ report_agent = create_pandas_dataframe_agent(
     agent_type="openai-tools"
     )
 
-"""
-response = report_agent.invoke("Create a line plot showing the closing price over time")
-print(response["output"])
-"""
-
+#Run agent
 while True:
     print("Prompt>> ",end="")
     q = input()
