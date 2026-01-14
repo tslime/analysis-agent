@@ -1,5 +1,11 @@
+import pandas as pd
+
 from langchain_openai import AzureChatOpenAI
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent 
+
+
+def extract_csv_data(csv_file_path:str):
+    return pd.read_csv(csv_file_path)
 
 def load_llm(api_key,api_v,end_point,model,temp):
     
