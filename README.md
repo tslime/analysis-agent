@@ -105,17 +105,17 @@ df = extract_csv_data("data/your_dataset.csv")
 
 ## Security Notes
 
-⚠️ Uses `allow_dangerous_code=True` for pandas operations
+Uses `allow_dangerous_code=True` for pandas operations
 - Only use with trusted datasets
 - Never commit `.env` file
 - Review agent output in verbose mode
 
 ## Technologies
 
-- **LangChain** — Agent framework
-- **Azure OpenAI** — GPT-4o-mini
-- **Pandas** — Data analysis
-- **Python-dotenv** — Environment management
+- **LangChain**: Agent framework
+- **Azure OpenAI**: GPT-4o-mini
+- **Pandas**: Data analysis
+- **Python-dotenv**: Environment management
 
 ## Troubleshooting
 
